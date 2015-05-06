@@ -7,10 +7,13 @@
 <br/>
 <br/>
 <br/>
-	<h2>Busqueda de Regalos</h2>
+<br/>
+	<h2>Regalos de:</h2>
+	<br/>
 	<form class="navbar-form">
-		<h3>Usuario:</h3>	
-		<g:select name="usuario" id="selectUser" from="${usuarios}" optionValue="user" optionKey="id" var="user" noSelection="${['':'Seleccionar...']}"/>	
+		<h3>
+		<g:select name="usuario" id="selectUser" from="${usuarios}" optionValue="user" optionKey="id" var="user" noSelection="${['':'Seleccionar Usuario...']}"/>	
+		</h3>
 		<br>
 				
 		<ul id="resultadoBusqueda"> </ul>

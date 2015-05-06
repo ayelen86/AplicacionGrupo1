@@ -15,9 +15,13 @@
 
 <body>
 <br/><br/><br/><br/>
+<br/>
+<form class="navbar-form">
 <g:select name="usuario" id="selectUser" from="${cumpleanieros}" optionValue="user" optionKey="id" var="user" noSelection="${['':'Seleccionar...']}"/>
+   <br/>
+   <br/>
    <p>Mes: ${mes.getMonth()}</p>
-
+	<br/>
 <ul id="resultadoBusqueda"><p>Regalo:</p> </ul>
 </form>
 
