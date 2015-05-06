@@ -10,7 +10,12 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/index")
+//Se agrega linea para habilitar el index de app sin Home de Grails
+		"/"(controller:"/gestionar/index")
+		
+//	Se comenta linea para inhabilitar el ingreso directo mediante Home de Grails		
+//        "/"(view:"/index")
         "500"(view:'/error')
+		
 	}
 }
