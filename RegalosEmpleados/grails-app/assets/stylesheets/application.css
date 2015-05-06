@@ -1,0 +1,25 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS file within this directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require bootstrap
+*= main.css
+*= require main
+*= require mobile
+*= require_self
+*/
+
+#general{
+	margin:65px;
+	width:960px;
+	margin-top:65px;
+	height:1000px;
+	position: absolute;
+	text-align: left;
+}
+
