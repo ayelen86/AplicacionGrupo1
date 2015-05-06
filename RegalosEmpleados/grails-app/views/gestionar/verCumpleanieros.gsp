@@ -20,7 +20,7 @@
 <g:select name="usuario" id="selectUser" from="${cumpleanieros}" optionValue="user" optionKey="id" var="user" noSelection="${['':'Seleccionar...']}"/>
    <br/>
    <br/>
-   <p>Mes: ${mes.getMonth()}</p>
+   <p>Mes: ${mes.getMonth()+1}</p>
 	<br/>
 <ul id="resultadoBusqueda"><p>Regalo:</p> </ul>
 </form>
