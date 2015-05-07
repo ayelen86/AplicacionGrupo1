@@ -8,6 +8,16 @@ class GestionarController {
     def index() {
 	}
 
+	def createListAnio(){
+		def ArrayList<Anio> anios=new ArrayList<Anio>()
+		for (int i= 1942; i<2100;i++){
+			Anio anio = new Anio()
+			anio.anio = i
+			anios.add(anio)
+		}
+		return anios
+	}
+	
 	def verCumpleanieros(){
 
 		def empleados = Usuario.list()
@@ -34,14 +44,13 @@ class GestionarController {
 	
 	def verRegalo() {
 		def listaUsuarios = Usuario.list()
-		def listaAnios = Anio.list()
-
-		return new ModelAndView("verRegalo", [usuarios: listaUsuarios, anios: listaAnios])
+		return new ModelAndView("verRegalo", [usuarios: listaUsuarios])
 	}
 
 	def seleccionarRegalo (){
-		def listaUsuarios = Usuario.list()
-		def listaAnios = Anio.list()
+		def listaUsuarios = Usuario.list()		
+		def listaAnios=createListAnio()		
+		
 		Date d = new Date()
 
 		return new ModelAndView("seleccionarRegalo", [usuarios: listaUsuarios, anios: listaAnios])
