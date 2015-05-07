@@ -17,17 +17,19 @@
 <br/><br/><br/><br/>
 <br/>
 <form class="navbar-form">
-<g:select name="usuario" id="selectUser" from="${cumpleanieros}" optionValue="user" optionKey="id" var="user" noSelection="${['':'Seleccionar...']}"/>
+<h3>
+<g:select name="usuario" id="selectUser" from="${cumpleanieros}" optionValue="user" optionKey="id" var="user" noSelection="${['':'Seleccionar Usuario...']}"/>
    <br/>
-   <br/>
+   <br/>	
    <p>Mes: ${mes.getMonth()+1}</p>
 	<br/>
-<ul id="resultadoBusqueda"><p>Regalo:</p> </ul>
+<ul id="resultadoBusqueda"><p></p> </ul>
+</h3>
 </form>
 
 <script type="text/template" id="templateItem">
 <li>
-    <a href="#url#">#title#</a><img src="#img#"/><p>Año : #anio#</p>
+    <a href="#url#">#title#</a><img src="#img#"/><p>Año: #anio#</p>
 </li>
 </script>
 

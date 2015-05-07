@@ -10,7 +10,7 @@
 <head>
 	<meta name="layout" content="bootstrap"/>
 	<asset:javascript src="application.js"/>
-	<title>Seleccionar Regalo</title>
+	<title>Asignacion de Regalo</title>
 </head>
 <body>
 <br/>
@@ -18,10 +18,15 @@
 <br/>
 <br/>
 <br/>
-	<p><input type="text" id="meliquery" name="query" placeholder="Busque aqui..." /></p>
+<form class="navbar-form">
+<h3>
+	<p><input type="text" id="meliquery" name="query" placeholder="Busque aqui un regalo..." /></p>
+	</h3>
+	</form>
 	<br/>
 	<br/>
-	<form action="${createLink(controller: "gestionar", action: "regaloGuardado")}" method='POST'>
+	<form class="navbar-form" action="${createLink(controller: "gestionar", action: "regaloGuardado")}" method='POST'>
+	<h3>
 		Seleccionar usuario:
 		<g:select name="user" from="${usuarios}" optionValue="user" optionKey="user"/>
 		<br/>
@@ -30,9 +35,11 @@
 		<g:select name="anio" from="${anios}" optionValue="anio" optionKey="anio"/>
 		<br/>
 		<br/>
+		</h3>
+	</form>	
 		<ul id="resultadoBusqueda"> </ul>
 		<input type="submit" value="Guardar">
-	</form>
+	
 	<script type="text/template" id="templateItem">
 		<li>
 			<a href="#url#">#title#</a><img src="#img#"/>

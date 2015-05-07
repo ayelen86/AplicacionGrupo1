@@ -2,10 +2,13 @@
 <head>
 </head>
 <body>
-	Regalo agregado!
-	<br>
+	<br/>
+	<br/>
+	Regalo asignado al empleado!
+	<br/>
+	<br/>
 	<form action="${createLink(controller: "gestionar", action: "index")}" method='POST'>
-		<input type="submit" value="Volver">
+		<input type="submit" value="Volver al Inicio">
 	</form>
 </body>
 
