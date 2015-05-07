@@ -17,6 +17,7 @@ class GestionarController {
 			if(mesActual.getMonth() == empleado.getCumpleanios().getMonth()){
 				cumpleanieros.add(empleado)
 			}
+			
 		}
 		return new ModelAndView("verCumpleanieros", [cumpleanieros: cumpleanieros, mes: mesActual])
 		//TODOOO
