@@ -22,7 +22,9 @@ class UsuarioController {
 		if(empleadoUser){
 		
 			redirect(uri:"/usuario/show/${empleadoUser.id}")
-			}
+			}else{
+			new ModelAndView("/usuario/error", [mje:"No existe el usuario"])
+		}
 	
 	}
 }
