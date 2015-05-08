@@ -20,8 +20,8 @@ class GestionarController {
 	
 	def verCumpleanieros(){
 
-		def empleados = Usuario.list()
-		def cumpleanieros = new ArrayList<Usuario>()
+		def empleados = Empleado.list()
+		def cumpleanieros = new ArrayList<Empleado>()
 		Date mesActual = new Date()
 		for(def empleado : empleados){
 			if(mesActual.getMonth() == empleado.getCumpleanios().getMonth()){
@@ -39,28 +39,28 @@ class GestionarController {
 		regalo.idMercadolibre = params.regalo
 		regalo.anio = new Integer(params.anio)
 		
-		def empleado = Usuario.findByUser(params.user)
+		def empleado = Empleado.findByUser(params.empleado)
 		empleado.addToRegalos(regalo).save(flush: true)
 	}
 	
 	def verRegalo() {
-		def listaUsuarios = Usuario.list()
-		return new ModelAndView("verRegalo", [usuarios: listaUsuarios])
+		def listaUsuarios = Empleado.list()
+		return new ModelAndView("verRegalo", [empleados: listaUsuarios])
 	}
 
 	def seleccionarRegalo (){
-		def listaUsuarios = Usuario.list()		
+		def listaUsuarios = Empleado.list()		
 		def listaAnios=createListAnio()		
 		
 		Date d = new Date()
 
-		return new ModelAndView("seleccionarRegalo", [usuarios: listaUsuarios, anios: listaAnios])
+		return new ModelAndView("seleccionarRegalo", [empleados: listaUsuarios, anios: listaAnios])
 	}
 	
 	def obtenerId() {
 
 		println params.user
-		def usuario = Usuario.findById(params.user)
+		def usuario = Empleado.findById(params.user)
 		def resultado = usuario.regalos.collect { it ->
 			[idMeli: it.idMercadolibre, anio: it.anio ]
 		}

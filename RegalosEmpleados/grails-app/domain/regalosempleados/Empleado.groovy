@@ -1,6 +1,6 @@
 package regalosempleados
 
-class Usuario {
+class Empleado {
 	String nombre
 	String apellido
 	Date cumpleanios

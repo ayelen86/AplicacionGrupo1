@@ -6,11 +6,11 @@ class UsuarioRestController extends RestfulController {
 	static responseFormats = ['json', 'xml']
 	
 	public UsuarioRestController() {
-		super(Usuario)
+		super(Empleado)
 	}
 	
 	def search() {
-		def usuario = Usuario.findById(params.Id)
+		def usuario = Empleado.findById(params.Id)
 		respond usuario
 	}
 }

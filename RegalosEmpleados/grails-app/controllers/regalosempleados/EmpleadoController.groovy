@@ -4,7 +4,7 @@ import grails.rest.RestfulController
 import grails.converters.JSON
 import org.springframework.web.servlet.ModelAndView
 
-class UsuarioController {
+class EmpleadoController {
 
 	def scaffold = true
 
@@ -17,13 +17,13 @@ class UsuarioController {
 	}
 	
 	def buscarEmpleadoPorUser(){
-		def user = params.user;
-		def empleadoUser=Usuario.findByUser(user)
+		def user = params.empleado;
+		def empleadoUser=Empleado.findByUser(user)
 		if(empleadoUser){
 		
-			redirect(uri:"/usuario/show/${empleadoUser.id}")
+			redirect(uri:"/empleado/show/${empleadoUser.id}")
 			}else{
-			new ModelAndView("/usuario/error", [mje:"No existe el usuario"])
+			new ModelAndView("/empleado/error", [mje:"No existe el empleado"])
 		}
 	
 	}

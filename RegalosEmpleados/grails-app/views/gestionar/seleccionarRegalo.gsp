@@ -28,7 +28,7 @@
 	<form class="navbar-form" action="${createLink(controller: "gestionar", action: "regaloGuardado")}" method='POST'>
 	<h3>
 		Seleccionar usuario:
-		<g:select name="user" from="${empleados}" optionValue="user" optionKey="user"/>
+		<g:select name="empleado" from="${empleados}" optionValue="user" optionKey="user"/>
 		<br/>
 		<br/>
 		Seleccionar año:

@@ -1,7 +1,7 @@
 package regalosempleados
 
 class Regalo {
-	static belongsTo = [usuario: Usuario]
+	static belongsTo = [empleado: Empleado]
     String idMercadolibre
 	int anio
     static constraints = {

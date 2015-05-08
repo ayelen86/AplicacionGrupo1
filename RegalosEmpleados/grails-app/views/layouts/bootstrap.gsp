@@ -27,8 +27,8 @@
                 <li><a href="${createLink(controller: 'Gestionar', action: 'verRegalo')}">Mostrar Regalos</a></li>
                 <li><a href="${createLink(controller: 'Gestionar', action: 'verCumpleanieros')}">Cumpleañeros del Mes</a></li>
                 <li><a href="${createLink(controller: 'Gestionar', action: 'seleccionarRegalo')}">Seleccionar Regalo</a></li>
-                <li><a href="${createLink(controller: 'Usuario', action: 'index')}">Agregar Empleado</a></li>
-                <li><a href="${createLink(controller: 'Usuario', action: 'buscarEmpleado')}">Buscar Empleado</a></li>
+                <li><a href="${createLink(controller: 'Empleado', action: 'index')}">Agregar Empleado</a></li>
+                <li><a href="${createLink(controller: 'Empleado', action: 'buscarEmpleado')}">Buscar Empleado</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
