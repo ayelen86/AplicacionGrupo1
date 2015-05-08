@@ -36,10 +36,10 @@
 		<br/>
 		<br/>
 		</h3>
-	</form>	
+		
 		<ul id="resultadoBusqueda"> </ul>
 		<input type="submit" value="Guardar">
-	
+	</form>
 	<script type="text/template" id="templateItem">
 		<li>
 			<a href="#url#">#title#</a><img src="#img#"/>
