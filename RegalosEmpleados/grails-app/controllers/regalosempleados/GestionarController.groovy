@@ -2,12 +2,15 @@ package regalosempleados
 
 import grails.converters.JSON
 import org.springframework.web.servlet.ModelAndView
+import grails.plugin.springsecurity.annotation.Secured
 
 class GestionarController {
 
+	@Secured(['ROLE_ADMIN','ROLE_USER'])
     def index() {
 	}
 
+	@Secured(['ROLE_ADMIN'])
 	def createListAnio(){
 		def ArrayList<Anio> anios=new ArrayList<Anio>()
 		for (int i= 1942; i<2100;i++){
@@ -18,6 +21,7 @@ class GestionarController {
 		return anios
 	}
 	
+	@Secured(['ROLE_ADMIN','ROLE_USER'])
 	def verCumpleanieros(){
 
 		def empleados = Empleado.list()
@@ -33,6 +37,7 @@ class GestionarController {
 		//TODOOO
 	}
 	
+	@Secured(['ROLE_ADMIN','ROLE_USER'])
 	def regaloGuardado() {
 
 		def regalo = new Regalo()
@@ -43,11 +48,13 @@ class GestionarController {
 		empleado.addToRegalos(regalo).save(flush: true)
 	}
 	
+	@Secured(['ROLE_ADMIN','ROLE_USER'])
 	def verRegalo() {
 		def listaUsuarios = Empleado.list()
 		return new ModelAndView("verRegalo", [empleados: listaUsuarios])
 	}
 
+	@Secured(['ROLE_ADMIN'])
 	def seleccionarRegalo (){
 		def listaUsuarios = Empleado.list()		
 		def listaAnios=createListAnio()		
@@ -57,6 +64,7 @@ class GestionarController {
 		return new ModelAndView("seleccionarRegalo", [empleados: listaUsuarios, anios: listaAnios])
 	}
 	
+	@Secured(['ROLE_ADMIN','ROLE_USER'])
 	def obtenerId() {
 
 		println params.user
