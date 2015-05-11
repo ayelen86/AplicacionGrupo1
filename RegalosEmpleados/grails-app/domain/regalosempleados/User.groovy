@@ -2,8 +2,8 @@ package regalosempleados
 
 class User {
 
+	Empresa empresa
 	transient springSecurityService
-
 	String username
 	String password
 	boolean enabled = true
