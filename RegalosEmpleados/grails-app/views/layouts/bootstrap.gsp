@@ -16,23 +16,27 @@
 
 
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="${createLink(controller: 'Gestionar', action: 'index')}">Regalos de Empleados</a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="${createLink(controller: 'Gestionar', action: 'index')}">Inicio</a></li>
-                <li><a href="${createLink(controller: 'Gestionar', action: 'verRegalo')}">Mostrar Regalos</a></li>
-                <li><a href="${createLink(controller: 'Gestionar', action: 'verCumpleanieros')}">Cumpleañeros del Mes</a></li>
-                <li><a href="${createLink(controller: 'Gestionar', action: 'seleccionarRegalo')}">Seleccionar Regalo</a></li>
-                <li><a href="${createLink(controller: 'Empleado', action: 'index')}">Agregar Empleado</a></li>
-                <li><a href="${createLink(controller: 'Empleado', action: 'buscarEmpleado')}">Buscar Empleado</a></li>
+<%--<nav class="navbar navbar-inverse navbar-fixed-top">--%>
+<%--    <div class="container">--%>
+<%--        <div class="navbar-header">--%>
+<%--            <a class="navbar-brand" href="${createLink(controller: 'Gestionar', action: 'index')}">Regalos de Empleados</a>--%>
+<%--        </div>--%>
+<%--        <div class="collapse navbar-collapse" id="navbar">--%>
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="${createLink(controller: 'Gestionar', action: 'index')}">Inicio</a></li>
+                <li role="presentation"><a href="${createLink(controller: 'Gestionar', action: 'verRegalo')}">Mostrar Regalos</a></li>
+                <li role="presentation"><a href="${createLink(controller: 'Gestionar', action: 'verCumpleanieros')}">Cumpleañeros del Mes</a></li>
+                <li role="presentation"><a href="${createLink(controller: 'Gestionar', action: 'seleccionarRegalo')}">Seleccionar Regalo</a></li>
+                <li role="presentation"><a href="${createLink(controller: 'Empleado', action: 'index')}">Agregar Empleado</a></li>
+                <li role="presentation"><a href="${createLink(controller: 'Empleado', action: 'buscarEmpleado')}">Buscar Empleado</a></li>
+                
+                <li role="presentation"><a href="${createLink(controller: 'Empleado', action: 'buscarEmpleado')}">Crear Usuario</a></li>
+                <li role="presentation"><a href="${createLink(controller: 'Empleado', action: 'buscarEmpleado')}">Crear Empledo</a></li>
+                <li role="presentation"><a href="${createLink(controller: 'logout')}"> Salir</a></li>                  
             </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
+<%--        </div><!--/.nav-collapse -->--%>
+<%--    </div>--%>
+<%--</nav>--%>
 <g:layoutBody/>
 </body>
 </html>
