@@ -16,27 +16,20 @@
 
 
 <body>
-<%--<nav class="navbar navbar-inverse navbar-fixed-top">--%>
-<%--    <div class="container">--%>
-<%--        <div class="navbar-header">--%>
-<%--            <a class="navbar-brand" href="${createLink(controller: 'Gestionar', action: 'index')}">Regalos de Empleados</a>--%>
-<%--        </div>--%>
-<%--        <div class="collapse navbar-collapse" id="navbar">--%>
-            <ul class="nav nav-tabs">
-                <li role="presentation" class="active"><a href="${createLink(controller: 'Gestionar', action: 'index')}">Inicio</a></li>
-                <li role="presentation"><a href="${createLink(controller: 'Gestionar', action: 'verRegalo')}">Mostrar Regalos</a></li>
-                <li role="presentation"><a href="${createLink(controller: 'Gestionar', action: 'verCumpleanieros')}">Cumpleañeros del Mes</a></li>
-                <li role="presentation"><a href="${createLink(controller: 'Gestionar', action: 'seleccionarRegalo')}">Seleccionar Regalo</a></li>
-                <li role="presentation"><a href="${createLink(controller: 'Empleado', action: 'index')}">Agregar Empleado</a></li>
-                <li role="presentation"><a href="${createLink(controller: 'Empleado', action: 'buscarEmpleado')}">Buscar Empleado</a></li>
-               
-                <li role="presentation"><a href="${createLink(controller: 'User', action: 'agregarUsuario')}">Agregar Usuario</a></li>
-                <li role="presentation"><a href="${createLink(controller: 'Empresa', action: 'index')}">Agregar Empresa</a></li>
-                <li role="presentation"><a href="${createLink(controller: 'logout')}"> Salir</a></li>                  
-            </ul>
-<%--        </div><!--/.nav-collapse -->--%>
-<%--    </div>--%>
-<%--</nav>--%>
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="${createLink(controller: 'Gestionar', action: 'index')}">Inicio</a></li>
+        <li role="presentation"><a href="${createLink(controller: 'Gestionar', action: 'verRegalo')}">Mostrar Regalos</a></li>
+        <li role="presentation"><a href="${createLink(controller: 'Gestionar', action: 'verCumpleanieros')}">Cumpleañeros del Mes</a></li>
+        <li role="presentation"><a href="${createLink(controller: 'Gestionar', action: 'seleccionarRegalo')}">Seleccionar Regalo</a></li>
+        <li role="presentation"><a href="${createLink(controller: 'Empleado', action: 'index')}">Agregar Empleado</a></li>
+        <li role="presentation"><a href="${createLink(controller: 'Empleado', action: 'buscarEmpleado')}">Buscar Empleado</a></li>       
+        <li role="presentation"><a href="${createLink(controller: 'User', action: 'agregarUsuario')}">Agregar Usuario</a></li>
+        <li role="presentation"><a href="${createLink(controller: 'Empresa', action: 'index')}">Agregar Empresa</a></li>
+		<li role="presentation"><form name="submitForm" method="POST" action="${createLink(controller: 'logout')}">
+								<a href="javascript:document.submitForm.submit()" style="padding-top: 11px">Salir</a></form>
+		</li>
+    </ul>
+
 <g:layoutBody/>
 </body>
 </html>
