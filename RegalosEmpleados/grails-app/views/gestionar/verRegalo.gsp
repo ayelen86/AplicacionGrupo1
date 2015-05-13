@@ -12,7 +12,7 @@
 	<br/>
 	<form class="navbar-form">
 		<h3>
-		<g:select name="usuario" id="selectUser" from="${empleados}" optionValue="user" optionKey="id" var="user" noSelection="${['':'Seleccionar Usuario...']}"/>	
+		<g:select name="usuario" id="selectUser" from="${empleados}" optionValue="usuario" optionKey="id" var="user" noSelection="${['':'Seleccionar Usuario...']}"/>	
 		</h3>
 		<br>
 				

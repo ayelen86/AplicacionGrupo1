@@ -28,54 +28,43 @@ class GestionarController {
 	
 	@Secured(['ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
 	def verCumpleanieros(){
-
 		def user = springSecurityService.currentUser
 		def empresa=user.empresa		
-		def empleados = empresa.empleados
-		
+		def empleados = empresa.empleados		
 		def cumpleanieros = new ArrayList<Empleado>()
 		Date mesActual = new Date()
 		for(def empleado : empleados){
 			if(mesActual.getMonth() == empleado.getCumpleanios().getMonth()){
 				cumpleanieros.add(empleado)
-			}
-			
+			}			
 		}
 		return new ModelAndView("verCumpleanieros", [cumpleanieros: cumpleanieros, mes: mesActual])
 	}
 	
 	@Secured(['ROLE_ADMIN_EMPRESA'])
 	def regaloGuardado() {
-
 		def regalo = new Regalo()
 		regalo.idMercadolibre = params.regalo
-		regalo.anio = new Integer(params.anio)
-		
-		def empleado = Empleado.findByUser(params.empleado)
+		regalo.anio = new Integer(params.anio)		
+		def empleado = Empleado.findById(params.empleadoId)
 		empleado.addToRegalos(regalo).save(flush: true)
 	}
 	
 	@Secured(['ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
 	def verRegalo() {
-//		def listaUsuarios = Empleado.list()
 		def user = springSecurityService.currentUser
 		def empresa=user.empresa
 		def listaUsuarios = empresa.empleados		
-		
 		return new ModelAndView("verRegalo", [empleados: listaUsuarios])
 	}
 
 	@Secured(['ROLE_ADMIN_EMPRESA'])
 	def seleccionarRegalo (){
-//		def listaUsuarios = Empleado.list()	
 		def user = springSecurityService.currentUser
 		def empresa=user.empresa
-		def listaUsuarios = empresa.empleados
-		
-		def listaAnios=createListAnio()		
-		
+		def listaUsuarios = empresa.empleados		
+		def listaAnios=createListAnio()			
 		Date d = new Date()
-
 		return new ModelAndView("seleccionarRegalo", [empleados: listaUsuarios, anios: listaAnios])
 	}
 	

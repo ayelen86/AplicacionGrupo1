@@ -27,8 +27,8 @@ class EmpleadoController {
 	
 	@Secured(['ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
 	def buscarEmpleadoPorUser(){
-		def empleado = params.empleado;
-		def empleadoUser=Empleado.findByUser(empleado)
+		def usuario=User.findByUsername(params.userName)		
+		def empleadoUser=Empleado.findByUsuario(usuario)
 		
 		if(empleadoUser){
 			def empId=empleadoUser.empresa.id

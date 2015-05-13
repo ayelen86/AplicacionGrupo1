@@ -16,7 +16,7 @@
     	<g:form method="post" controller="Empleado" action="buscarEmpleadoPorUser" class="form-inline" onsubmit="return validarForm()">
 				  <div class="form-group">
 				    <label for="exampleInputName2">User:</label>
-				    <g:textField class="form-control" id="campoUser" placeholder="Jane Doe" placeholder="Ingrese un empleado" name="empleado" value="${myValue}" />
+				    <g:textField class="form-control" id="campoUser" placeholder="Jane Doe" placeholder="Ingrese usuario" name="userName" value="${myValue}" />
 				  </div>
 				  <button class="btn btn-default" id="botonAgregarEmpleado">Buscar</button>
 		</g:form>

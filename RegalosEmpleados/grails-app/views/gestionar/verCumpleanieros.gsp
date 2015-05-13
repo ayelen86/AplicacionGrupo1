@@ -18,7 +18,7 @@
 <br/>
 <form class="navbar-form">
 <h3>
-<g:select name="usuario" id="selectUser" from="${cumpleanieros}" optionValue="user" optionKey="id" var="user" noSelection="${['':'Seleccionar Usuario...']}"/>
+<g:select name="usuario" id="selectUser" from="${cumpleanieros}" optionValue="usuario" optionKey="id" var="user" noSelection="${['':'Seleccionar Usuario...']}"/>
    <br/>
    <br/>	
    <p>Mes: ${mes.getMonth()+1}</p>
