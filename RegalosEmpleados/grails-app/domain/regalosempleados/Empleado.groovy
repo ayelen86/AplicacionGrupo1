@@ -4,7 +4,8 @@ class Empleado {
 	String nombre
 	String apellido
 	Date cumpleanios
-	String user	
+	String user
+	User usuario	
 //	User user
 	Empresa empresa
 	

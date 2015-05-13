@@ -29,6 +29,8 @@
                 <li><a href="${createLink(controller: 'Gestionar', action: 'seleccionarRegalo')}">Seleccionar Regalo</a></li>
                 <li><a href="${createLink(controller: 'Empleado', action: 'index')}">Agregar Empleado</a></li>
                 <li><a href="${createLink(controller: 'Empleado', action: 'buscarEmpleado')}">Buscar Empleado</a></li>
+                <li><a href="${createLink(controller: 'User', action: 'agregarUsuario')}">Agregar Usuario</a></li>
+                <li><a href="${createLink(controller: 'Empresa', action: 'index')}">Agregar Empresa</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

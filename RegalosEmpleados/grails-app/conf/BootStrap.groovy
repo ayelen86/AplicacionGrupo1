@@ -7,10 +7,30 @@ class BootStrap {
 
 	 def init = { servletContext ->
 	  
-//      def adminRole = new Role(authority: 'ROLE_ADMIN').save(flush: true)
-//      def userRole = new Role(authority: 'ROLE_USER').save(flush: true)
+//      def adminRole = new Role(authority: 'ROLE_ADMIN_GENERAL').save(flush: true)
+//      def adminEmpresaRole = new Role(authority: 'ROLE_ADMIN_EMPRESA').save(flush: true)
+//	  def empleadoRole = new Role(authority: 'ROLE_EMPLEADO').save(flush: true)
+//	  
+//	  def acc= new Empresa(nombre:'Accenture',direccion: 'Diagonal 80 y 48')
+//	  acc.save(flush: true)
+//	  
+//	  def userGeneral = new User(username: 'ayelen', password: '123',empresa:acc)
+//	  userGeneral.save(flush: true)
+//	  UserRole.create userGeneral, adminRole, true
+//	  
+//	  def userEmpresa  = new User(username: 'empresa', password: '123',empresa:acc)
+//	  userEmpresa.save(flush: true)
+//	  UserRole.create userEmpresa, adminEmpresaRole, true
+//	  
+//	  def userEmpleado  = new User(username: 'empleado', password: '123',empresa:acc)
+//	  userEmpleado.save(flush: true)
+//	  UserRole.create userEmpleado, empleadoRole, true
+//	  
+//	  assert User.count() == 3
+//	  assert Role.count() == 3
+//	  assert UserRole.count() == 3
+/*	 
 		 
-/*		 
 //		 ACCENTURE	  	  
 	  def accRole = new Role(authority: 'ROLE_ACC').save(flush: true)  
 	  def acc= new Empresa(nombre:'Accenture',direccion: 'Diagonal 80 y 48')
@@ -41,8 +61,8 @@ class BootStrap {
       assert User.count() == 4
       assert Role.count() == 2
       assert UserRole.count() == 4
-	 
-	 */ 
+*/
+
    }
 	
 		 
