@@ -26,7 +26,7 @@ class GestionarController {
 		return anios
 	}
 	
-	@Secured(['ROLE_ADMIN_GENERAL','ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
+	@Secured(['ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
 	def verCumpleanieros(){
 
 		def user = springSecurityService.currentUser
@@ -44,7 +44,7 @@ class GestionarController {
 		return new ModelAndView("verCumpleanieros", [cumpleanieros: cumpleanieros, mes: mesActual])
 	}
 	
-	@Secured(['ROLE_ADMIN_GENERAL','ROLE_ADMIN_EMPRESA'])
+	@Secured(['ROLE_ADMIN_EMPRESA'])
 	def regaloGuardado() {
 
 		def regalo = new Regalo()
@@ -55,7 +55,7 @@ class GestionarController {
 		empleado.addToRegalos(regalo).save(flush: true)
 	}
 	
-	@Secured(['ROLE_ADMIN_GENERAL','ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
+	@Secured(['ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
 	def verRegalo() {
 //		def listaUsuarios = Empleado.list()
 		def user = springSecurityService.currentUser
@@ -65,7 +65,7 @@ class GestionarController {
 		return new ModelAndView("verRegalo", [empleados: listaUsuarios])
 	}
 
-	@Secured(['ROLE_ADMIN_GENERAL','ROLE_ADMIN_EMPRESA'])
+	@Secured(['ROLE_ADMIN_EMPRESA'])
 	def seleccionarRegalo (){
 //		def listaUsuarios = Empleado.list()	
 		def user = springSecurityService.currentUser
@@ -79,7 +79,7 @@ class GestionarController {
 		return new ModelAndView("seleccionarRegalo", [empleados: listaUsuarios, anios: listaAnios])
 	}
 	
-	@Secured(['ROLE_ADMIN_GENERAL','ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
+	@Secured(['ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
 	def obtenerId() {
 		println params.user
 		def usuario = Empleado.findById(params.user)

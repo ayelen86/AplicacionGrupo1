@@ -15,17 +15,17 @@ class EmpleadoController {
 
 	def scaffold = true
 
-	@Secured(['ROLE_ADMIN_GENERAL','ROLE_ADMIN_EMPRESA'])
+	@Secured(['ROLE_ADMIN_EMPRESA'])
 	def index(){
 		
 	}
 	
-	@Secured(['ROLE_ADMIN_GENERAL','ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
+	@Secured(['ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
 	def buscarEmpleado(){
 		
 	}
 	
-	@Secured(['ROLE_ADMIN_GENERAL','ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
+	@Secured(['ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
 	def buscarEmpleadoPorUser(){
 		def empleado = params.empleado;
 		def empleadoUser=Empleado.findByUser(empleado)
