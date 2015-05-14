@@ -12,7 +12,7 @@ import grails.plugin.springsecurity.SpringSecurityService;
 
 class EmpleadoController {
 	def springSecurityService
-
+	def empleadoService
 	def scaffold = true
 
 	@Secured(['ROLE_ADMIN_EMPRESA'])
@@ -27,8 +27,7 @@ class EmpleadoController {
 	
 	@Secured(['ROLE_ADMIN_EMPRESA','ROLE_EMPLEADO'])
 	def buscarEmpleadoPorUser(){
-		def usuario=User.findByUsername(params.userName)		
-		def empleadoUser=Empleado.findByUsuario(usuario)
+		def empleadoUser = empleadoService.buscarEmpleadoPorUser(params.userName)
 		
 		if(empleadoUser){
 			def empId=empleadoUser.empresa.id
